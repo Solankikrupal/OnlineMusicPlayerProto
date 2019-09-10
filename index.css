@@ -1,0 +1,366 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	
+
+}
+
+*{
+	font-family: "Helvetica Neue" , Helvetica , Arial ,sans-serif;
+	color: #000;
+}
+body{
+    background-color: #181818;
+    padding:14px;
+    min-width: 720px;
+}
+
+#nowplayingBarContainer{
+
+	width: 100%;
+    background-color: #282828;
+    bottom: 0;
+    position: fixed;
+    min-width: 620px;
+}
+#nowplayingBars{
+	display: flex;
+    height: 90px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+#nowplayingleft,#nowplayingright{
+	width: 30%;
+    background-color: #ff1;
+    min-width: 180px;
+}
+#nowplayingright{
+	position: relative;
+	margin-top: 16px;
+}
+#nowplayingcenter{
+	 width: 40%;
+    min-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nowplayingBars .content{
+	width: 100%;
+	height: 57px;
+
+}
+.playingbar .button{
+	margin: 0 auto;
+	display: table;
+}
+.controlButton {     
+ background-color: transparent;
+    border: none;
+    vertical-align: middle;
+}
+
+.controlButton img{
+	width: 20px;
+    height: 20px;
+}
+
+.controlButton.play img,
+.controlButton.pause img{
+    width: 32px;
+    height: 32px;
+}
+
+.controlButton:hover{
+	cursor: pointer;
+}
+/*.controlButton.play img:hover,
+.controlButton.pause img:hover
+{
+	width: 40px;
+	height: 40px;
+}*/
+.progressTime{
+	color: #fff;
+    font-size: 12px;
+    min-width: 40px;
+    text-align: center;
+ 
+}
+.playingbackbar{
+	display: flex;
+}
+.progressBars{
+	width: 100%;
+    height: 14px;
+    display: inline-flex; 
+    cursor: pointer;
+
+}
+.progressbgbar{
+	background-color:#1f3496 ;
+	height: 4px;
+	width: 100%;
+	border-radius: 2px;
+	}
+.progress{
+	background-color: #fff;
+    width: 0;
+    border-radius: 2px;
+    height: 4px;
+}
+.playingbackbar .progressBars{
+	margin-top: 3px;
+}
+#nowplayingleft .album_pic{
+	    height: 100%;
+    max-width: 57px;
+    margin-right: 15px;
+    float: left;
+    background-size: cover;
+}
+
+#nowplayingleft .trackInfo{
+	    font-weight: bold;
+    	display: table;
+
+}
+#nowplayingleft .trackInfo .trackName{
+	margin:6px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+#nowplayingleft .artistName span{
+	font-size: 12px;
+	color: #a0a0a0;
+}
+.volumeBars{
+    width: 180px;
+    position: absolute;
+    right: 0;
+
+}
+.volumeBars .progressBars{
+	width: 125px;
+}
+.progressBarsv{
+	width: 125px;
+    height: 14px;
+    display: inline-flex; 
+    cursor: pointer;
+
+}
+#topContainer{
+	min-height: 100%
+	width:100%;
+}
+#navContainer{
+	/*background-color: #fff;*/
+    width: 220px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.navBar .logo img{
+	    width: 60px;
+    height: 100%;
+    
+
+}
+.navBar .logo h4{
+	color: #fff;
+	display: inline;
+	position: absolute;
+    font-family: monospace;
+    font-size: xx-large;
+    margin: 15px;
+}
+.navBar .logo img:hover{
+	
+	width: 70px;
+	height:70px;
+}
+.navBar .logo h4:hover{
+	color: #77d862;
+}
+.group .navGroup .navItem{
+	color: #77d862;
+	    padding: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+}
+.group {
+	border-top: 1px solid #fff;
+    padding: 10px 0;
+}
+.group .navGroup{
+	padding: 10px 	
+} 
+.navItem{
+	
+	text-decoration: none; 
+}
+.navItem img{
+	width: 17px;
+    height: 17px;
+    margin-top: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#mainViewContainer{
+	    margin-left: 220px;
+    padding-bottom: 90px;
+    width: calc(100%-220px);
+}
+#mainContent{
+	padding: 0 20px;
+}
+
+.pageBigHeading{
+    padding: 20px;
+    text-align: center;
+
+}
+
+.gridViewItem {
+    display:inline-block;
+    margin-right: 20px;
+    width: 29%;
+    max-width: 200px;
+    min-width: 150px;
+   margin-left:240px;
+    }
+.gridViewItem img {
+    width: 100%;
+}
+
+.gridViewInfo {
+    font-weight: 300;
+    text-align: center;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.gridViewItem a {
+    text-decoration: none;
+}
+.entityInfo {
+    padding: 40px 0 10px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.entityInfo .leftSection {
+    width: 30%;
+    float: left;
+    max-width: 250px;
+}
+
+.entityInfo .leftSection img {
+    width: 100%;
+}
+
+.entityInfo .rightSection {
+    width: 70%;
+    float: left;
+    padding: 5px 10px 5px 40px;
+    box-sizing: border-box;
+}
+
+.entityInfo .rightSection h2 {
+    margin-top: 0px;
+}
+
+.entityInfo .rightSection p {
+    color: #939393;
+    font-weight: 200;
+}
+.tracklist {
+    padding: 0;
+}
+
+.tracklistRow {
+    height: 40px;
+    padding: 15px 10px;
+    list-style: none;
+}
+
+.tracklistRow span {
+    color: #939393;
+    font-weight: 200;
+}
+
+.tracklistRow:hover {
+    background-color: #282828;
+}
+
+.tracklistRow .trackCount {
+    width: 8%;
+    float: left;
+}
+
+.tracklistRow .trackCount img {
+    width: 20px;
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
+.tracklistRow:hover .trackCount img {
+    visibility: visible;
+}
+
+.tracklistRow .trackCount span {
+    visibility: visible;
+}
+
+.tracklistRow:hover .trackCount span {
+    visibility: hidden;
+}
+
+.tracklistRow .trackInfo {
+    width: 75%;
+    float: left;
+}
+
+.tracklistRow .trackInfo span {
+    display: block;
+}
+
+.tracklistRow .trackOptions {
+    width: 5%;
+    float: left;
+    text-align: right;
+}
+
+.tracklistRow .trackOptions img {
+    width: 15px;
+    visibility: hidden;
+}
+
+.tracklistRow:hover .trackOptions img {
+    visibility: visible;
+}
+
+.tracklistRow .trackDuration {
+    width: 12%;
+    float: left;
+    text-align: right;
+}
+
+.tracklistRow .trackInfo .trackName {
+    color: #fff;
+    margin-bottom: 7px;
+}
+
+.artistInfo {
+    text-align: center;
+}
