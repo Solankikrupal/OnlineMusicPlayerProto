@@ -1,5 +1,6 @@
 <?php
-	error_reporting(E_ALL);
+	//error_reporting(E_ALL);
+	
 		
 	$con= mysqli_connect("localhost","root","","Spotify");
 	if(!$con)

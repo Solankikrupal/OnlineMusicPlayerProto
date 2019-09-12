@@ -1,12 +1,11 @@
-
 <div id="navContainer">
 				
 		<nav class="navBar">
-		<a href="index.html" class="logo">
+		<span class="logo" onclick="openPage('index.php')">
 			<img src="icons/logohappen.png">
 			<h4>Spotify</h4>
-		</a>
-	</nav>
+		</span>
+		</nav>
 	<div class="group">
 		<div class="navGroup">
 			<a href="search.php" class="navItem">Search

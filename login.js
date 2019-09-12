@@ -1,12 +1,15 @@
 $(document).ready(function(){
 	console.log("Ready");
-	$("#hidelogin").click(function(){
+
+	$("#hidelogin").click(function()
+	{
 	console.log("pressed log in");
 		$("#registerform").show();
 		$("#loginForm").hide();
 	});
 
-	$("#hideregister").click(function(){
+	$("#hideregister").click(function()
+	{
 		console.log("pressed reg in");
 		$("#registerform").hide();
 		$("#loginForm").show();

@@ -1,6 +1,6 @@
 <?php
 //include 'login_process.php';
-include 'connect.php';
+//include 'connect.php';
 include 'login_process.php';
 $account = new Account($con);
 
@@ -13,9 +13,11 @@ if(isset($_POST['loginButton']))
 	if ($result == true) 
 	{
 		# code...
+		//$_SESSION['userLoggedIn'] = $loginUsername;
 		echo ("<script language='javascript'>
 			   window.alert('Welcome to login page')
-			   window.location.href('index.html');</script>");
+			   </script>");
+		header("Location: index.php");
 	}
 	function getvalue($loginUsername)
 	{
@@ -43,20 +45,25 @@ if(isset($_POST['register']))
 }
 if(isset($_POST['register']))
 {
-	echo '<script language="javascript">
-				$(document).ready(function() {
-						$("#registerform").hide();
-						$("#loginForm").show();
-												   });
-		</script>';											
-}else
+	echo "<script language='javascript'>
+				
+				$(document).ready(function() 
+				{
+					$('#registerform').hide();
+					$('#loginForm').show();
+			    });
+
+		</script>";											
+}
+else
 {
-	echo '<script language="javascript">
-				$(document).ready(function() {
-						$("#registerform").show();
-						$("#loginForm").hide();
-													  });	
-	</script>';
+	echo "<script language='javascript'>
+				$(document).ready(function() 
+				{
+						$('#registerform').show();
+						$('#loginForm').hide();
+				});	
+	</script>";
 	
 }
 ?>

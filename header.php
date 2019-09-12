@@ -1,3 +1,18 @@
+<?php
+include ("connect.php");
+//session_destroy();
+/*if (isset($_SESSION['userLoggedIn'])) 
+{
+	# code...
+	$userLoggedIn = $_SESSION['userLoggedIn'];
+	echo "<script>userLoggedIn = '$userLoggedIn';</script>";
+}
+else
+{
+	header("Location:login.php");
+}*/
+?>
+
 
 <!DOCTYPE html>
 <html>
